@@ -8,7 +8,7 @@
         }
 
         h1 {
-            font-size: 30px;
+            font-size: 40px;
             color: blueviolet;
             font-style: italic;
 
@@ -27,6 +27,7 @@
     <button onclick="checkBalance()">check your balance</button>
     <p> I like your project, good working</p>
     <p>thank you man</p>
+    <p>your are welcom</p>
 
     <script>
         let balance = 0;
@@ -50,7 +51,7 @@
         }
         function withdraw(inputValue) {
             if (balance <= 0) {
-                alert("Sorry! insuficient balance")
+                alert("Sorry! No Balance in your account, please go to work instead of wasting your time. Thank")
             }
             else {
                 balance = balance - inputValue;
