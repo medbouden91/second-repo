@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>0</h1>
+    <input type="number" id="inputV" required placeholder="amount"><br><br>
+    <button id="withdraw" onclick="withdraw()">withdwaw</button><br><br>
+    <button id="deposit" onclick="deposit(inputValue)">deposit</button><br><br>
+    <button onclick="checkBalance()">check your balance</button>
+
+    <script>
+        let balance = 0;
+
+
+
+        let depositBtn = document.querySelector("#deposit");
+
+        let withdrawBtn = document.querySelector("#withdraw");
+
+        let inputValue = document.querySelector("#inputV").value;
+
+        withdrawBtn.addEventListener('click', function () {
+            deposit();
+
+        })
+        function deposit(inputValue) {
+            // let inputValue = balance;
+            balance = balance + inputValue;
+            console.log(balance);
+        }
+        function withdraw(inputValue) {
+            if (balance <= 0) {
+                alert("Sorry! insuficient balance")
+            }
+            else {
+                balance = balance - inputValue;
+            }
+        }
+        function checkBalance() {
+            console.log(balance);
+
+        }
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
